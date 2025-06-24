@@ -1,0 +1,77 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #6b8f71, #3e5947); /* tons verdes conforme a sua paleta */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #f0f5f0; /* tom verde bem claro para contraste */
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 380px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      color: #2f4f35; /* verde escuro */
+    }
+
+    input[type="email"],
+    input[type="text"] {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+      border: 1px solid #a3bfa6;
+      border-radius: 10px;
+      background: #fff;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="email"]:focus,
+    input[type="text"]:focus {
+      border-color: #3e5947;
+      box-shadow: 0 0 8px rgba(62, 89, 71, 0.5);
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #3e5947; /* verde escuro */
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background: #2f4f35;
+      transform: scale(1.02);
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #555;
+    }

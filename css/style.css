@@ -1,0 +1,426 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d4d4d4;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    background: linear-gradient(90deg, #415d4b, #6b8f71);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    margin-left: 20vh;
+    display: flex;
+    align-items: center;
+    height: 1vh;
+    font-weight: bold;
+    gap: 0px;
+    transition: transform 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.highlight {
+    color: #ffd700;
+}
+
+nav a {
+    margin: 20px;
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0bdd74;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #567764, #8da88a);
+    padding: 0px 50px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.hero .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background: linear-gradient(90deg, #567764, #8da88a);
+    height: 90vh;
+    width: 60vh;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.hero .left h2 {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero .left h1 {
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+.hero .right {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.hero .right:hover {
+    transform: scale(1.05);
+}
+
+.hero .right img {
+    width: 400px;
+}
+
+.hero .right h1 {
+    margin-top: 10px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.btn-anunciar {
+    margin-top: 2vh;
+    background-color: #6b8f71; /* tom de verde do seu site */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-anunciar:hover {
+    background-color: #567764; /* tom um pouco mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+.btn-anunciar:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Sobre */
+.quem-somos-novo {
+    background: linear-gradient(135deg, #6b8f71, #3e5947);
+    padding:100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quem-somos-novo .conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* animation: slideFade 1s ease forwards; removed as 'slideFade' is not defined here */
+}
+
+.quem-somos-novo .texto {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 100px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    color: #fff;
+    flex: 1 1 300px;
+}
+
+.quem-somos-novo .texto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.quem-somos-novo .texto p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.quem-somos-novo .imagem {
+    flex: 1 1 300px;
+    position: relative;
+}
+
+.quem-somos-novo .imagem img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/*rodapé*/
+footer {
+    background: linear-gradient(90deg, #415d4b, #6b8f71);
+    color: white;
+    padding: 50px 50px;
+    margin-top: 10px;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    font-size: 14px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen to the right */
+    width: 100%;
+    height: 100%;
+    background: rgba(65, 93, 75, 0.95); /* verde fosco */
+    display: flex;
+    justify-content: flex-end;
+    transition: right 0.5s ease;
+    z-index: 1000;
+}
+
+.modal.active {
+    right: 0; /* Slide in */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    background: #6b8f71;
+    width: 320px;
+    height: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.2);
+    color: white;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    font-size: 14px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: white;
+    color: #6b8f71;
+}
+
+.links {
+    text-align: center;
+    font-size: 13px;
+}
+
+.links a {
+    color: #d0d0d0;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.links a:hover {
+    color: white;
+}
+
+/* Botão de login */
+.login-btn {
+    background: none;
+    border: 2px solid transparent; /* Changed to transparent as it looks like icon only */
+    padding: 0; /* Adjust padding for icon */
+    border-radius: 0; /* Adjust border-radius for icon */
+    color: white; /* Icon color */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Animation for icon */
+}
+
+.login-btn:hover {
+    transform: scale(1.1); /* Zoom effect for icon */
+}
+
+/* Intro Screen */
+.intro-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none; /* Allows clicks through when hidden */
+    transition: opacity 0.6s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+.intro-screen.active {
+    opacity: 1;
+    pointer-events: auto; /* Allows interaction when active */
+}
+  
+.intro-content {
+    max-width: 480px;
+    background: rgba(0,0,0,0.15);
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+  
+.intro-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+  
+.intro-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+  
+.btn-start {
+    background: white;
+    color: #4caf50;
+    font-weight: 700;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+.btn-start:hover {
+    background: #388e3c;
+    color: white;
+}
+  
+.hidden {
+    display: none !important;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* Start visible, will be hidden by JS */
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#loading-screen.hidden {
+    display: none; /* Fully remove from flow after transition */
+}
+
+.spinner {
+    border: 8px solid #333;
+    border-top: 8px solid #4caf50;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* This #content is removed as the intro screen handles initial display */
+/* #content {
+  display: none;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+} */

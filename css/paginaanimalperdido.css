@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Header (Keep header styles local if they have slight variations or for strict separation) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  background: linear-gradient(90deg, #415d4b, #6b8f71);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  margin-left: 20vh;
+  display: flex;
+  align-items: center;
+  height: 1vh ;
+  font-weight: bold;
+  gap: 0px;
+  transition: transform 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+nav a {
+  margin: 20px;
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0bdd74;
+}
+
+/* Details Container */
+.detalhes-container {
+  display: flex;
+  max-width: 1200px;
+  height: 70vh;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+.foto-pet {
+  flex: 1;
+  background: linear-gradient(to right, #a7bfc2, #7c9f8b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.foto-pet img {
+  max-width: 80%;
+  border-radius: 10px;
+}
+
+.indicadores {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.indicadores span {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.info-pet {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+
+.info-pet h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.preco {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.info-pet h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.botoes-contato {
+  margin-top: 20px;
+}
+
+.botoes-contato button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #eee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.botoes-acao {
+  margin-top: 20px;
+}
+
+.btn-procurar {
+  background: #f28c28;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.btn-encontrei {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.alerta {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 40px;
+  border-radius: 50px;
+}

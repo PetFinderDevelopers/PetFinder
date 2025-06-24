@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetFinder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="img/logo_dois.png" alt="PetFinder Logo" width="200px">          
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="cadastropet.html">Anunciar Animal</a>
+            <a href="petperdido.html">Animais Perdidos</a>
+            <a href="#">Quem Somos</a>
+            <a href="#" class="login-btn">
+                <img src="https://img.icons8.com/ios-glyphs/30/ffffff/user--v1.png" alt="Login Icon">
+            </a>
+        </nav>
+    </header>
+
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div>Carregando...</div>
+    </div>
+
+    <div id="introScreen" class="intro-screen hidden">
+        <div class="intro-content">
+            <h1>Encontre seu animal perdido</h1>
+            <p>Nosso site ajuda a reunir animais perdidos com suas famílias. Poste informações do seu pet perdido e ajude a comunidade a encontrá-lo!</p>
+            <button id="btnEnterSite" class="btn-start">Entrar no site</button>
+        </div>
+    </div>
+  
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>LOGIN</h2>
+            <input type="email" placeholder="Digite seu Email">
+            <input type="password" placeholder="Senha">
+            
+            <div class="links">
+                <span>Esqueceu a senha?</span>
+                <a href="redefinirsenha.html">Esqueci a senha</a>
+            </div>
+            
+            <button class="submit-btn">Entrar</button>
+            
+            <div class="links">
+                <span>Ainda não tem uma conta?</span>
+                <a href="cadastro.html">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="left">
+            <h2>PERDEU SEU </h2>
+            <h1> PET?</h1>
+            <a href="cadastropet.html"><button class="btn-anunciar">Anunciar</button></a>
+        </div>
+        
+        <div class="right">
+            <img src="img/logo_principal.png" alt="PetFinder Logo Graphic">
+        </div>
+    </section>
+
+    <section class="quem-somos-novo">
+        <div class="conteudo">
+            <div class="texto">
+                <h2>Quem Somos</h2>
+                <p>
+                    Somos uma plataforma dedicada a ajudar tutores a encontrarem seus pets perdidos de forma rápida e eficiente.
+                    Nossa missão é conectar pessoas, promover a adoção responsável e proteger os animais.
+                </p>
+            </div>
+            <div class="imagem">
+                <img src="img/cachorroimagem.png" alt="Quem Somos">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p> &copy; 2025 PetFinder. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram"></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

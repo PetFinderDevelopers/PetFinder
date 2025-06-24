@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Pet</title>
+  <link rel="stylesheet" href="css/cadastropet.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+        <img src="img/logo_dois.png" alt="" width="200px">          
+    </div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="cadastropet.html">Anunciar Animal</a>
+        <a href="petperdido.html">Animais Perdidos</a>
+        <a href="perfilusuario.html">Quem Somos</a>
+        <a href="perfilusuario.html" class="login-btn">
+<img src="https://img.icons8.com/ios-glyphs/30/ffffff/user--v1.png" alt="Login">
+</a>
+    </nav>
+</header>
+
+<div id="loading-screen">
+  <div class="spinner"></div>
+  <div>Carregando...</div>
+</div>
+
+<div id="content"> 
+    <section class="cadastro-pet">
+        <div class="upload-foto">
+            <label for="fotoPet">
+                <img src="https://cdn-icons-png.flaticon.com/512/685/685655.png" alt="Camera" width="50">
+                <p>Adicione fotos<br>do seu pet</p>
+            </label>
+            <input type="file" id="fotoPet" name="foto" accept="image/*" required>
+        </div>
+
+        <form class="form-pet" action="cadastro_pet.php" method="POST" enctype="multipart/form-data">
+            <h2>Cadastro do Pet</h2>
+
+            <div class="linha">
+                <input type="text" name="nome_pet" placeholder="Nome do Pet" required>
+                <input type="number" name="valor" placeholder="Valor (R$)" required>
+            </div>
+
+            <div class="linha">
+                <select name="tipo" required>
+                    <option value="">Selecione Animal</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Outro">Outro</option>
+                </select>
+                <input type="text" name="cor" placeholder="Cor" required>
+            </div>
+
+            <div class="linha">
+                <input type="text" name="idade" placeholder="Idade" required>
+                <input type="text" name="nome_responsavel" placeholder="Nome Responsável" required>
+            </div>
+
+            <textarea name="descricao" placeholder="Descrição" rows="4" required></textarea>
+
+            <button type="submit">Anunciar</button>
+        </form>
+    </section>
+</div>
+
+<script src="js/cadastropet.js"></script>
+</body>
+</html>

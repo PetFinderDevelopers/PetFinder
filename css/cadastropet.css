@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #c4d1dc, #618e75);
+}
+
+/* Header (Keep header styles local if they have slight variations or for strict separation) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  background: linear-gradient(90deg, #415d4b, #6b8f71);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  margin-left: 20vh;
+  display: flex;
+  align-items: center;
+  height: 1vh ;
+  font-weight: bold;
+  gap: 0px;
+  transition: transform 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+nav a {
+  margin: 20px;
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0bdd74;
+}
+
+/* Cadastro Pet Section */
+.cadastro-pet {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 20px;
+}
+
+.upload-foto {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #333;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload-foto input {
+  display: none;
+}
+
+.upload-foto p {
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+.form-pet {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+}
+
+.form-pet h2 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.form-pet .linha {
+  display: flex;
+  gap: 10px;
+}
+
+.form-pet input, 
+.form-pet select, 
+.form-pet textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  width: 100%;
+}
+
+.form-pet .linha input, 
+.form-pet .linha select {
+  flex: 1;
+}
+
+.form-pet textarea {
+  resize: none;
+}
+
+.form-pet button {
+  padding: 10px;
+  background: #618e75;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-pet button:hover {
+  background: #50725f;
+}
+
+/* Loading Screen for cadastropet.html */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.spinner {
+  border: 8px solid #333;
+  border-top: 8px solid #4caf50;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#content {
+  display: none;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}

@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* Header (Keep header styles local if they have slight variations or for strict separation) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  background: linear-gradient(90deg, #415d4b, #6b8f71);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+  margin-left: 20vh;
+  display: flex;
+  align-items: center;
+  height: 1vh ;
+  font-weight: bold;
+  gap: 0px;
+  transition: transform 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.highlight {
+  color: #ffd700;
+}
+
+nav a {
+  margin: 20px;
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0bdd74;
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.grid-pets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card-pet {
+  background: #7c9f8b;
+  border: 1px solid #333;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-pet img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-pet .info {
+  background: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-pet h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.card-pet p {
+  margin: 5px 0 0;
+  font-size: 12px;
+  color: #333;
+}
+
+.favorito {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Loading Screen for petperdido.html */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.spinner {
+  border: 8px solid #333;
+  border-top: 8px solid #4caf50;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#content {
+  display: none;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Social Bar */
+.social-bar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #121212;
+  padding: 10px 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+  z-index: 10000;
+}
+
+.social-bar a {
+  display: block;
+  color: white;
+  font-size: 24px;
+  padding: 12px 10px;
+  margin: 5px 0;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-bar a:hover {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+}
