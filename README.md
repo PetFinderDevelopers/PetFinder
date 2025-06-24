@@ -7,6 +7,7 @@ Matheus - 12301222
 Davi Mgalhães - 12301612
 Caique Pelizaro - 12400874
 Bernardo Vieira - 12300780
+
 Turma: 3D1
 
 - [x]O sistema deve permitir o cadastro de usuários.
